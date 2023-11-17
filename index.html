@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,400;0,600;1,200;1,400&display=swap"
+    rel="stylesheet">
+  <title>Document</title>
+</head>
+
+<body>
+  <article class="bg">
+    <form id="form">
+      <div>
+        <input type="hidden" value="add_survey_form" id="action">
+      </div>
+      <div class="container-main">
+        <div class="container-questions">
+          <div class="container-subtitle">
+            <div class="container-img" id="containerImg"></div>
+            <h3 class="sub-title">Diagnóstico</h3>
+          </div>
+          <!-- <div class="container-question"
+          data-url="<?= admin_url('admin-ajax.php') ?>"
+          data-nonce="<?= wp_create_nonce('add_survey_form') ?>"
+       >
+       </div> -->
+          <div class="container-question" id="containerQuestions">
+            <div id="questions">
+
+            </div>
+          </div>
+        </div>
+        <div class="bottom">
+          <!-- Buttons -->
+          <div class="container-btn">
+
+            <!-- <button type="button" class="button btn-before">
+              <svg id="Group_126" data-name="Group 126" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" width="36.632" height="31.399" viewBox="0 0 36.632 31.399">
+                <defs>
+                  <clipPath id="clip-path">
+                    <rect id="Rectangle_22" data-name="Rectangle 22" width="36.632" height="31.399" fill="#b7256b" />
+                  </clipPath>
+                </defs>
+                <g id="Group_69" data-name="Group 69" clip-path="url(#clip-path)">
+                  <path id="Path_650" data-name="Path 650"
+                    d="M36.632,15.521v-.189a.649.649,0,0,0-.423-.607.991.991,0,0,0-.539-.17,13.929,13.929,0,0,1-9.7-3.884A12.926,12.926,0,0,1,22.225,1.16,1.056,1.056,0,0,0,21.178,0h-.833a.634.634,0,0,0-.624.755,43.072,43.072,0,0,0,1.421,5.668,14.917,14.917,0,0,0,5.65,7.28.567.567,0,0,1-.322,1.033q-8.658-.008-17.313-.182c-2.274-.065-6.2-.4-8.084-.569A.986.986,0,0,0,0,14.97v1.46a.985.985,0,0,0,1.148.973,56.885,56.885,0,0,1,8.011-.435q8.561-.164,17.134-.182a.567.567,0,0,1,.328,1.029,14.908,14.908,0,0,0-5.478,7.161,43.072,43.072,0,0,0-1.421,5.668.634.634,0,0,0,.624.755h.833a1.055,1.055,0,0,0,1.046-1.159,12.926,12.926,0,0,1,3.743-9.512,13.927,13.927,0,0,1,9.7-3.884c.024,0,.046-.006.069-.008l.235,0a.649.649,0,0,0,.659-.649v-.312h0v-.357Z"
+                    transform="translate(0 0)" fill="#b7256b" />
+                </g>
+              </svg>
+
+              <span>Anterior</span>
+            </button> -->
+
+            <button type="button" class="button hideItem removeItem" id="next" disabled>
+              <span>Siguiente</span>
+
+              <svg id=" Group_126" data-name="Group 126" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" width="36.632" height="31.399" viewBox="0 0 36.632 31.399">
+                <defs>
+                  <clipPath id="clip-path">
+                    <rect id="Rectangle_22" data-name="Rectangle 22" width="36.632" height="31.399" fill="#b7256b" />
+                  </clipPath>
+                </defs>
+                <g id="Group_69" data-name="Group 69" clip-path="url(#clip-path)">
+                  <path id="Path_650" data-name="Path 650"
+                    d="M36.632,15.521v-.189a.649.649,0,0,0-.423-.607.991.991,0,0,0-.539-.17,13.929,13.929,0,0,1-9.7-3.884A12.926,12.926,0,0,1,22.225,1.16,1.056,1.056,0,0,0,21.178,0h-.833a.634.634,0,0,0-.624.755,43.072,43.072,0,0,0,1.421,5.668,14.917,14.917,0,0,0,5.65,7.28.567.567,0,0,1-.322,1.033q-8.658-.008-17.313-.182c-2.274-.065-6.2-.4-8.084-.569A.986.986,0,0,0,0,14.97v1.46a.985.985,0,0,0,1.148.973,56.885,56.885,0,0,1,8.011-.435q8.561-.164,17.134-.182a.567.567,0,0,1,.328,1.029,14.908,14.908,0,0,0-5.478,7.161,43.072,43.072,0,0,0-1.421,5.668.634.634,0,0,0,.624.755h.833a1.055,1.055,0,0,0,1.046-1.159,12.926,12.926,0,0,1,3.743-9.512,13.927,13.927,0,0,1,9.7-3.884c.024,0,.046-.006.069-.008l.235,0a.649.649,0,0,0,.659-.649v-.312h0v-.357Z"
+                    transform="translate(0 0)" fill="#b7256b" />
+                </g>
+              </svg>
+            </button>
+            <button type="submit" class="button btn-send hideItem removeItem" id="btnSend">Enviar</button>
+          </div>
+
+        </div>
+        <!-- Progress bar -->
+        <div class="container-progress-bar">
+          <p class="counter">
+            <span id="currentQuestion">0</span>
+            <span>/</span>
+            <span id="totalQuestions">0</span>
+          </p>
+          <div class="progress-bar">
+            <div class="fill-progress-bar"></div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </article>
+  <script src="./script.js"></script>
+</body>
+
+</html>
